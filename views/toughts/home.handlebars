@@ -1,0 +1,52 @@
+<div class="container">
+  {{#if search}}
+    <h1>Você ta pesquisando por: <span class="text-warning">{{search}}</span></h1>
+    <figcaption>Todos os resultados: <span class="text-warning">{{pensamentoQtde}}</span></figcaption>
+  {{else}}
+    <h1>Pensamentos</h1>
+    <figcaption>Total de todos os resultados: <span class="text-warning">{{pensamentoQtde}}</span></figcaption>
+  {{/if}}
+  <div class="mb-5 mt-5 container-fluid d-flex flex-row justify-content-between">
+    <form action="/" method="get">
+      <div class="col-12">
+        <input type="text" class="form-control col-12" name="search" placeholder="Buscando por algo?">
+        <button type="submit" class="btn btn-outline-warning mt-1">Procurar</button>
+      </div>
+    </form>
+    <form action="/" method="get">
+      <div class="col-3">
+        <label class="form-label">Odernar por:</label>
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="new">
+        <button type="submit">
+          <i class="bi bi-arrow-up bg-dark text-white"></i>
+        </button>
+      </div>
+    </form>
+    <form action="/" method="get">
+      <div class="col-3">
+        <label class="form-label">Odernar por:</label>
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="old">
+        <button type="submit">
+          <i class="bi bi-arrow-down bg-dark text-white"></i>
+        </button>
+      </div>
+    </form>
+    <div class="col-1">
+      <a href="/" class="btn btn-outline-warning">Limpar</a>
+
+    </div>
+
+  </div>
+  {{#each pensamento}}
+  <div class="card text-white border-warning bg-dark mb-5 col-12" style="max-width: 18rem;">
+    <div class="card-header">Pensamento</div>
+    <div class="card-body">
+      <h5 class="card-title"><span class="fst-italic">"{{this.title}}"<span></h5>
+      <p class="card-text">Por <span class="text-warning">{{this.User.name}}<span></p>
+    </div>
+  </div>
+  {{/each}}
+
+</div>

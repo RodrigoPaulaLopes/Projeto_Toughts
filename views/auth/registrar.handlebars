@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 class="mb-3">Registrar</h1>
+    <form action="/registrar" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+            <input type="text" name="name" class="form-control bg-dark border border-warning text-white" id="exampleFormControlInput1" placeholder="Digite um nome">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email<span class="text-warning"> *</span></label>
+            <input type="email" name="email" class="form-control bg-dark border border-warning text-white"  placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Senha<span class="text-warning"> *</span></label>
+            <input type="password" name="senha" class="form-control bg-dark border border-warning text-white"  placeholder="Digite sua senha">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Confirmar sua Senha<span class="text-warning"> *</span></label>
+            <input type="password" name="ConfirmarSenha" class="form-control bg-dark border border-warning text-white"  placeholder="Digite sua senha">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-outline-warning">
+                <i class="bi bi-save-fill"></i> Cadastrar
+            </button>
+        </div>
+        <div class="mb-3">
+            <p>Já possui uma conta? <a href="/login" class="link-warning">Clique aqui</a></p>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Faça seu registrar </h1>
+    <form action="/login" method="POST">
+       
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email<span class="text-warning"> *</span></label>
+            <input type="email" name="email" class="form-control bg-dark border border-warning text-white"  placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Senha<span class="text-warning"> *</span></label>
+            <input type="password" name="senha" class="form-control bg-dark border border-warning text-white"  placeholder="Digite sua senha" required>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-outline-warning">
+                  <i class="bi bi-box-arrow-in-right"></i> Entrar
+            </button>
+        </div>
+        <div class="mb-3">
+            <a href="/registrar" class="text-warning">Não tem conta?</a>
+        </div>
+    </form>
+
+</div>

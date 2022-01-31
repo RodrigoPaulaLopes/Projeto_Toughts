@@ -1,0 +1,23 @@
+<div class="container">
+    <a href="/toughts/dashboard" class="link-warning">Voltar</a>
+    <form action="/toughts/registrarEditarPensamentosPost" method="POST">
+        <input type="hidden" name="id" value="{{pensamento.id}}">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Pensamento</label>
+            <input type="text" name="title" class="form-control bg-dark border border-warning text-white" id="exampleFormControlInput1" placeholder="Digite o que você está pensando hoje!" value="{{pensamento.title}}">
+        </div>
+        
+        <div class="mb-3">
+            <button type="submit" class="btn btn-outline-warning">
+                
+                {{#if pensamento.id}}
+                     <i class="bi bi-save-fill"></i> Atualizar
+                {{else}}
+                 <i class="bi bi-pen-fill"></i> Cadastrar
+                {{/if}}
+            </button>
+        </div>
+        
+    </form>
+
+</div>
